@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 05</title>
+    <style>
+        .card{
+            background-color:#060829;
+            width: 300px;
+            box-shadow: 5px 5px 5px grey;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            opacity: 1;
+        }
+        .card:active{
+            box-shadow:inset 5px 5px 5px grey;
+        }
+        .card__image{
+            width: 100%;
+            
+        } 
+
+        .card__header{
+            font-size: 14px;
+        }
+
+        .card__enroll{
+            color:#0092ef;
+            font-weight: bold;
+        }
+
+        .card__certified{
+            margin-top: 20px;
+        }
+
+        .card__certified__student{
+            font-size: 13px;
+        }
+
+        .card__btns{
+            margin-top:20px;
+        }
+
+        .card__btns button{
+            border: none;
+            border-radius: 6px;
+            color: white;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .card__btns button:hover{
+            opacity: 0.7;
+        }
+
+        .card__btns .card__js__btn{
+            background-color: #F0DB4F;
+        }
+
+        .card__btns .card__node__btn{
+            background-color: #8BC34A;
+        }
+
+        .card__learn__later{
+            color:white;
+            margin-top: 20px;
+            width:100%;
+            background-color: #0092EF;
+            border:none;
+            border-radius: 10px;
+            padding: 8px;
+            cursor: pointer;
+            
+        }
+
+        .card__learn__later:hover{
+            opacity: 0.7;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="card__image" src="https://d27v83ov1up738.cloudfront.net/courses/OHOd0Xw9KZwTvLNo3cobGSM2VQX9JTD7i7CwYh6c.png" alt="course photo">
+        <h3 class="card__header">MERN Stack Basic to Advance</h3>
+        <span class="card__enroll">Your Enrolled Course</span>
+        <div class="card__certified">
+
+                <svg width="14" height="14" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="20" fill="#00B000"></rect>
+                    <g clip-path="url(#clip0_42_71)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.5168 9.61359C18.8882 9.2427 19.3851 9.02446 19.9094 9.00194C20.4338 8.97941 20.9476 9.15422 21.3494 9.49189L21.4837 9.61464L23.477 11.6069H26.2949C26.8241 11.607 27.3337 11.807 27.7216 12.1669C28.1095 12.5269 28.3471 13.0201 28.3868 13.5477L28.3931 13.7051V16.523L30.3864 18.5163C30.7576 18.8877 30.976 19.3848 30.9985 19.9095C31.0211 20.4341 30.8461 20.9481 30.5081 21.35L30.3854 21.4832L28.3921 23.4765V26.2944C28.3922 26.8238 28.1923 27.3336 27.8324 27.7218C27.4724 28.1099 26.9791 28.3477 26.4512 28.3874L26.2949 28.3926H23.478L21.4847 30.3859C21.1133 30.7571 20.6162 30.9755 20.0916 30.9981C19.567 31.0206 19.053 30.8456 18.6511 30.5076L18.5179 30.3859L16.5246 28.3926H13.7056C13.1762 28.3928 12.6664 28.1929 12.2782 27.8329C11.8901 27.473 11.6523 26.9796 11.6126 26.4518L11.6074 26.2944V23.4765L9.61407 21.4832C9.24289 21.1118 9.02447 20.6147 9.00194 20.0901C8.97941 19.5654 9.15441 19.0514 9.49238 18.6496L9.61407 18.5163L11.6074 16.523V13.7051C11.6075 13.1759 11.8075 12.6663 12.1674 12.2784C12.5273 11.8905 13.0205 11.6529 13.5482 11.6132L13.7056 11.6069H16.5235L18.5168 9.61359ZM23.2305 16.8346L18.778 21.287L16.9232 19.4322C16.7264 19.2355 16.4594 19.125 16.1811 19.1251C15.9028 19.1252 15.636 19.2359 15.4392 19.4327C15.2425 19.6296 15.1321 19.8965 15.1322 20.1748C15.1323 20.4531 15.2429 20.72 15.4398 20.9167L17.9618 23.4387C18.069 23.546 18.1962 23.631 18.3363 23.689C18.4763 23.7471 18.6264 23.7769 18.778 23.7769C18.9296 23.7769 19.0797 23.7471 19.2198 23.689C19.3598 23.631 19.4871 23.546 19.5942 23.4387L24.7139 18.318C24.905 18.1202 25.0107 17.8552 25.0083 17.5801C25.006 17.305 24.8956 17.0419 24.7011 16.8474C24.5066 16.6529 24.2435 16.5425 23.9684 16.5401C23.6933 16.5378 23.4283 16.6435 23.2305 16.8346Z"
+                            fill="white"></path>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_42_71" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#12E100"></stop>
+                            <stop offset="1" stop-color="#0D7D00"></stop>
+                        </linearGradient>
+                        <clipPath id="clip0_42_71">
+                            <rect width="22.0005" height="22" fill="white" transform="translate(9.00001 9)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            
+
+            <span class="card__certified__student">0 student certified.</span>
+        </div>
+
+        <div class="card__btns">
+        <a href="https://creativecodermm.com/courses?tag=javascript" target="_blank">
+            <button class="card__js__btn">Javascript</button>
+        </a>
+
+        <a href="https://creativecodermm.com/courses?tag=nodejs" target="_blank">
+            <button class="card__js__btn">Nodejs</button>
+        </a>
+
+        </div>
+        <a href="#">
+            <button class="card__learn__later">
+                Learn Later
+            </button>
+        </a>
+    </div>
+</body>
+</html>
