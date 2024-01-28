@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    background-image: linear-gradient(rgba(14, 0, 0, 0.819),rgba(12, 14, 9, 0.675)),url('../images/asian\ handsome.jpg');
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: bottom;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 100px 100px;
+    place-content: center;
+}
+
+.header h1{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+p{
+    line-height: 50px;
+    text-align: justify;
+    color: wheat;
+}
