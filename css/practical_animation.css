@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    background-color: grey;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 4rem;
+    
+}
+
+section div{
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+section div:nth-child(2){
+    animation-delay: 1.5s;
+}
+
+section div:nth-child(3) {
+    animation-delay: 1.7s;
+}
+
+section div:nth-child(4) {
+    animation-delay: 1.9s;
+}
+
+section div:nth-child(5) {
+    animation-delay: 2.1s;
+}
+
+section div:nth-child(6) {
+    animation-delay: 2.3s;
+}
+
+section div:last-child {
+    animation-delay: 2.7s;
+}
+
+@keyframes fadeInOut{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 90px;
+    height: 90px;
+    background-color: goldenrod;
+    border-radius: 50%;
+
+    animation-name: move_right;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    margin: 10px;
+
+    display: grid;
+    place-content: center;
+    font-size: larger;
+}
+
+section div:first-child{
+    background-color: red;
+    animation-timing-function: ease;
+}
+
+section div:nth-child(2){
+    background-color: orange;
+    animation-timing-function: linear;
+}
+
+section div:nth-child(3){
+    background-color: aqua;
+    animation-timing-function: ease-in;
+}
+
+section div:last-child{
+    background-color: black;
+    animation-timing-function: ease-out;
+}
+
+section div:last-child {
+    background-color: green;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move_right {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translate(400px);
+    }
+}
