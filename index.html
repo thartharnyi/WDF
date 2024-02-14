@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+
+    
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header{
+      padding: 60px 80px;
+      background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('./images/desktop/image-hero.jpg');
+      height: 80vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+      height: 50px;
+    }
+
+    nav div{
+      display: flex;
+      gap: 20px;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    nav div a{
+      font-size: 0.9rem;
+      color: white;
+      font-family: 'Alata', sans-serif;
+      position: relative;
+    }
+
+    nav div a:after{
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: white;
+
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      
+
+      transform: rotateY(90deg);
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+
+    nav div a:hover:after{
+      transform: rotateY(0);
+    }
+
+    .container{
+      margin: 0 170px;
+    }
+
+    .hero_section_title{
+      line-height: 60px;
+      font-size: 3rem;
+      text-transform: uppercase;
+      display: inline-block;
+      color: white;
+      border: 2px solid white;
+      font-family: 'Josefin Sans', sans-serif;
+      letter-spacing: 3px;
+      padding: 15px 50px 15px 15px;
+      font-weight: 300;
+      margin-top: 60px;
+      margin-left: 15px;
+    }
+
+    #interactive_section{
+      margin-top: 150px;
+      margin-bottom: 80px;
+      margin-left: 180px;
+      position: relative;
+    }
+
+    .interactive_section_content{
+      width: 500px;
+      padding: 40px;
+      background-color: white;
+      border: 2px solid white;
+      position: absolute;
+      bottom: 0;
+      left: 550px;
+    }
+
+    .header{
+      font-size: 3rem;
+      font-weight: 100;
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .interactive_section_content p{
+      font-family: 'Josefin Sans', sans-serif;
+      line-height: 20px;
+      
+    }
+
+    .creation_button{
+      background: transparent;
+      padding:10px 30px;
+    }
+
+    .creation_header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .creation_header h1{
+      margin: 0;
+    }
+
+    #creation_section{
+      margin-top: 100px;
+    }
+
+    .card_container{
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    .card{
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .card img{
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .card h1{
+      color: white;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .card_title{
+      font-size: 30px;
+    }
+
+    .card::before{
+      content: 'Deep Earth';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      z-index: 10;
+      top: -100%;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+
+      font-family: 'Josefin Sans', sans-serif;
+
+      transition-property: top;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+    }
+
+    .card:hover::before{
+      top: 0;
+    }
+
+    .card:hover img{
+      transform: scale(1.3);
+    }
+
+    .footer_section{
+      margin-top: 80px;
+      background-color: black;
+      padding: 20px;
+      color: white;
+    }
+  
+
+    .footer_logo{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .footer_icons{
+      display: flex;
+      gap: 20px;
+    }
+
+    .last_section{
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+      font-family: 'Josefin Sans', sans-serif;
+      gap: 20px;
+    }
+
+    .last_section div a{
+      color: white;
+      font-family: 'Josefin Sans', sans-serif;
+
+      position: relative;
+    }
+
+    footer div .atags{
+      display: flex;
+      gap: 30px;
+
+      position: relative;
+    }
+
+    .atags a::after{
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -5px;
+      left: -1px;
+
+
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      transform: rotateY(90deg);
+    }
+
+
+    .atags a:hover::after{
+      transform: rotateY(0);
+    }
+
+    .footer_icons i:hover{
+      cursor: pointer;
+      color: aqua;
+    }
+
+    /* Responsive */
+    
+    @media(width: 768px){
+
+      .container{
+        margin: 0 10px;
+      }
+
+      nav{
+        padding: 0 18px;
+      }
+
+      .navigation_links{
+        display: none;
+      }
+
+      .hero_section_title{
+        line-height: 40px;
+        font-size: 2.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        letter-spacing: 2px;
+        padding: 15px 50px 15px 15px;
+        margin-top: 40px;
+      }
+
+    #interactive_section img{
+      width: 100%;
+      margin-left: -80px;
+    }
+
+    .interactive_section_content{
+      width: 100%;
+      padding: 0;
+      position: static;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-left: -80px;
+      margin-top: 50px;
+    }
+
+    .creation_header{
+      display: none;
+    }
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <img src="./images/logo.svg" alt="">
+    
+      <div class="navigation_links">
+        <a href="">About</a>
+        <a href="">Careers</a>
+        <a href="">Events</a>
+        <a href="">Products</a>
+        <a href="">Support</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="hero_section_title">
+        <div>Immersive</div> 
+        <div>experiences</div> 
+        <div>that deliver</div>
+      </h1>
+    </div>
+
+  </header>
+
+  <section class="container" id="interactive_section">
+    <img src="./images/desktop/image-interactive.jpg" alt="">
+
+    <div class="interactive_section_content">
+      <h1 class="header">
+        The leader in interactive VR
+      </h1>
+      <p>
+        Founded in 2011, Loopstudios has been producing world-class virtual reality
+        projects for some of the best companies around the globe. Our award-winning
+        creations have transformed businesses through digital experiences that bind
+        to their brand.
+      </p>
+    </div>
+  </section>
+  
+  <section id="creation_section" class="container">
+
+    <div class="creation_header">
+      <h1 class="header">Our Creation</h1>
+      <button class="creation_button">See all</button>
+    </div>
+
+    <div class="card_container">
+
+      <div class="card">
+        <img src="images/desktop/image-deep-earth.jpg" alt="">
+        <h1 class="header card_title">Deep<br> earth</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-night-arcade.jpg" alt="">
+        <h1 class="header card_title">Night<br> Arcade</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-soccer-team.jpg" alt="">
+        <h1 class="header card_title">soccer<br>team vr</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-grid.jpg" alt="">
+        <h1 class="header card_title">the<br> grid</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-from-above.jpg" alt="">
+        <h1 class="header card_title">from up<br> above vr</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-pocket-borealis.jpg" alt="">
+        <h1 class="header card_title">pocket <br>borealis</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-curiosity.jpg" alt="">
+        <h1 class="header card_title">the <br>curiosity</h1>
+      </div>
+
+      <div class="card">
+        <img src="images/desktop/image-fisheye.jpg" alt="">
+        <h1 class="header card_title">make it <br>fisheye</h1>
+      </div>
+
+    </div>
+
+  </section>
+  
+  <footer class="footer_section">
+    <div class="container">
+
+      <div class="footer_logo">
+        <img src="./images/logo.svg" alt="">
+        <!-- icon -->
+        <div class="footer_icons">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="last_section">
+        <div class="atags">
+          <a href="">About</a>
+          <a href="">Careers</a>
+          <a href="">Events</a>
+          <a href="">Products</a>
+          <a href="">Products</a>
+        </div>
+
+        <div class="footer_span">
+          <small><span>
+            &copy; 2022 Loopstudios. All rights reversed
+          </span></small>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hnin Shwe Sin</a>.
+  </div>
+</body>
+</html>
